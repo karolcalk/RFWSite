@@ -1,0 +1,14 @@
+{
+  "name": "wojdat",
+  "version": "1.0.0",
+  "description": "rafl wojdat portfoli websie",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "karol calka",
+  "license": "ISC",
+  "dependencies": {
+    "ionicons": "^5.0.0"
+  }
+}
