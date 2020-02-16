@@ -8,8 +8,25 @@ setTimeout(function () {
 }, 3500);
 
 
-//--------------------
-
+//----------preloader animation----------
+// nav animation script
+const t1 = new TimelineMax({
+  paused: true
+});
+t1.to('.overlay', .6, {
+  top: 0,
+  ease: Expo.easeInOut
+});
+t1.staggerFrom('.menu ul li', .6, {
+  y: 100,
+  opacity: 0,
+  ease: Expo.easeOut
+}, .6);
+t1.reverse();
+$(document).on('click', '.menu-btn', function () {
+  t1.reversed(!t1.reversed());
+})
+// ----nav animation script---------
 
 TweenMax.from(".left-col", 2, {
   width: "0%",
