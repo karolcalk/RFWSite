@@ -21,7 +21,7 @@ t1.staggerFrom('.menu ul li', .6, {
   y: 100,
   opacity: 0,
   ease: Expo.easeOut
-}, .6);
+}, .2);
 t1.reverse();
 $(document).on('click', '.menu-btn', function () {
   t1.reversed(!t1.reversed());
@@ -106,11 +106,11 @@ TweenMax.from(".media p", 2, {
 TweenMax.staggerFrom(
   ".media ul li",
   2, {
-    delay: 3.8,
-    opacity: 0,
-    y: 20,
-    ease: Expo.easeInOut
-  },
+  delay: 3.8,
+  opacity: 0,
+  y: 20,
+  ease: Expo.easeInOut
+},
   0.1
 );
 

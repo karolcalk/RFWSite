@@ -216,7 +216,7 @@ button:focus {
   left: -30px;
   background: url(../img/nav-img/nav-img1.jpg) no-repeat 50% 50%;
   background-size: cover;
-  transition: 1s;
+  transition: 0.3s;
   animation: fade-in 0.3s ease-in-out;
 }
 .nav > ul li:nth-child(2):hover::before {
