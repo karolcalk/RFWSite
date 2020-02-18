@@ -28,6 +28,16 @@ $(document).on('click', '.menu-btn', function () {
 })
 // ----nav animation script---------
 
+// ----photo-categoires animation
+
+
+$('.cat-photo').jaliswall({
+  item: '.cat-item',
+  columnClass: '.cat-column'
+})
+
+// ----photo-categoires animation /
+
 TweenMax.from(".left-col", 2, {
   width: "0%",
   ease: Expo.easeInOut
