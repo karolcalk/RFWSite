@@ -147,7 +147,7 @@ body {
 
 .menu-btn {
   position: fixed;
-  margin: 1.2em;
+  margin: 1em;
   right: 0;
   z-index: 100;
 }
@@ -569,6 +569,49 @@ header {
   animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
   animation-delay: 3.6s;
 }
+/* scrool down mouse  */
+.middle {
+  display: none;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mouse {
+  width: 50px;
+  height: 90px;
+  border: 4px solid #333;
+  border-radius: 60px;
+}
+.mouse::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  top: 30px;
+  background-color: #333;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  opacity: 1;
+  animation: mouse 2s infinite;
+}
+@media (max-width: 900px) {
+  .middle {
+    display: block;
+  }
+}
+@keyframes mouse {
+  from {
+    opacity: 1;
+    top: 10px;
+  }
+  to {
+    opacity: 0;
+    top: 70px;
+  }
+}
+
 /* about me */
 .about-me {
   text-align: center;
@@ -600,14 +643,18 @@ header {
   margin: 20px 0;
 }
 .service-img {
-  width: 200px;
-  height: 160px;
+  width: 260px;
+  height: 300px;
   margin: auto;
-  background: #ecf6ff;
+}
+
+.service-img:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
 }
 .service-img img {
-  width: 200px;
-  height: 160px;
+  width: 260px;
+  height: 300px;
 }
 .service-name {
   font-weight: 600;
@@ -643,62 +690,62 @@ header {
   background: #6ab04c !important;
 }
 
-/* ---------------------- */
-/* .cat-photo {
-  position: absolute;
-
-  top: 100vh;
-  background-color: #0f0f0f;
-  color: #505050;
-}
-.cat-item {
-  display: block;
-  margin: 0 0 24px 0;
-  padding: 12px;
-  background-color: #1e1e1e;
-  transition: all 0.2s;
-}
-.cat-item:hover {
-  transform: translateY(-6px);
-  transition: all 0.2s;
-}
-.cat-item > img {
-  display: block;
+/* galery */
+.gallery {
   width: 100%;
-  margin: 0 0 30px 0;
+  margin-top: 50px;
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template:
+    "1fr 1fr 1fr 1fr 1fr" 33.33vh
+    "1fr 1fr 1fr 1fr 1fr" 33.33vh
+    "1fr 1fr 1fr 1fr 1fr" 33.33vh;
+  grid-gap: 5px;
+}
+.gallery .box {
+  position: relative;
+  background-color: #ccc;
+}
+.gallery .boc img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery .box.a {
+  grid-row: span 2;
+}
+.gallery .box.b,
+.gallery .box.f,
+.gallery .box.h,
+.gallery .box.j {
+  grid-column: span 2;
 }
 
-.cat-item p {
-  text-align: center;
-  color: gray;
-  font-weight: 300;
-  margin-top: 10px;
-}
-.cat-item h2 {
-  text-align: center;
-  color: #fff;
-  font-size: 1.4em;
-  text-transform: uppercase;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
- .this class is adding in JS */
-/*.cat-column {
-  display: block;
-  position: relative;
-  width: 33.33333%;
-  float: left;
-  padding: 0 12px;
-}
-@media (max-width: 900px) {
-  .cat-column {
-    width: 50%;
+@media (max-width: 1000px) {
+  .gallery {
+    grid-template:
+      "1fr 1fr 1fr " 250px
+      "1fr 1fr 1fr " 250px
+      "1fr 1fr 1fr " 250px
+      "1fr 1fr 1fr " 250px
+      "1fr 1fr 1fr " 250px;
   }
 }
-@media (max-width: 480px) {
-  .cat-column {
-    width: auto;
-    float: none;
+@media (max-width: 768px) {
+  .gallery {
+    grid-template:
+      "1fr 1fr" 200px
+      "1fr 1fr" 200px
+      "1fr 1fr" 200px
+      "1fr 1fr" 200px
+      "1fr 1fr" 200px
+      "1fr 1fr" 200px
+      "1fr 1fr" 200px;
   }
-} */
-/* --------------------------- */ /* category images */ /* ------------ */
+  .gallery .box.h {
+    grid-column: span 1;
+  }
+}

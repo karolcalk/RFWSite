@@ -57,8 +57,17 @@ $('.services').owlCarousel({
       items: 3
     }
   }
+
 })
 // --------------------------------------
+// mouse scroll down 
+
+jQuery('.middle').click(function (e) {
+  $('html, body').animate({
+    scrollTop: window.innerHeight
+  }, 1000)
+});
+
 // ----photo-categoires animation /
 
 TweenMax.from(".left-col", 2, {
