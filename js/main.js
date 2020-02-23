@@ -36,6 +36,29 @@ $('.cat-photo').jaliswall({
   columnClass: '.cat-column'
 })
 
+
+
+// owl-carousel animation for rafal services
+$('.services').owlCarousel({
+  margin: 20,
+  loop: true,
+  autoplay: true,
+  autoplayTimeout: 2000,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 2
+    }
+    ,
+    1000: {
+      items: 3
+    }
+  }
+})
+// --------------------------------------
 // ----photo-categoires animation /
 
 TweenMax.from(".left-col", 2, {

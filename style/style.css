@@ -8,6 +8,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+
   width: 100%;
   height: 100vh;
   font-family: Helvetica;
@@ -269,6 +270,14 @@ button:focus {
 }
 
 /* -------- */
+header {
+  height: 100vh;
+}
+@media (max-width: 900px) {
+  header {
+    height: 200vh;
+  }
+}
 .left-col,
 .right-col {
   position: absolute;
@@ -559,8 +568,82 @@ button:focus {
   animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
   animation-delay: 3.6s;
 }
-/*  photos category sectio */
-.cat-photo {
+/* about me */
+.about-me {
+  text-align: center;
+}
+
+/*  services */
+.services-section {
+  width: 100%;
+  min-height: 60vh;
+}
+.inner-width {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+.services-section h1 {
+  text-align: center;
+  /* font-size: var(--headers-font); */
+  font-size: 2em;
+  font-weight: bolder;
+  margin-bottom: 80px;
+}
+
+.services-section h1 strong {
+  color: #6ab04c;
+}
+.service {
+  text-align: center;
+  margin: 20px 0;
+}
+.service-img {
+  width: 200px;
+  height: 160px;
+  margin: auto;
+  background: #ecf6ff;
+}
+.service-img img {
+  width: 200px;
+  height: 160px;
+}
+.service-name {
+  font-weight: 600;
+  font-size: var(--seconds-font);
+  margin: 20px 0;
+}
+.service-desc {
+  max-width: 400px;
+  margin: auto;
+  color: #333;
+  font-size: 17px;
+}
+.owl-dots {
+  text-align: center;
+  margin-top: 40px;
+}
+.owl-dot {
+  width: 14px;
+  height: 14px;
+  background: #808080 !important;
+  margin: 0 6px;
+  border-radius: 14px;
+  outline: none;
+  transition: 0.3s linear;
+}
+
+.owl-dot.active {
+  width: 36px;
+  background: #6ab04c !important;
+}
+.owl-dot:hover {
+  width: 36px;
+  background: #6ab04c !important;
+}
+
+/* ---------------------- */
+/* .cat-photo {
   position: absolute;
 
   top: 100vh;
@@ -598,8 +681,8 @@ button:focus {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* .this class is adding in JS */
-.cat-column {
+ .this class is adding in JS */
+/*.cat-column {
   display: block;
   position: relative;
   width: 33.33333%;
@@ -616,9 +699,5 @@ button:focus {
     width: auto;
     float: none;
   }
-}
-/* --------------------------- */
-
-/* main section */
-
-/* ------------ */
+} */
+/* --------------------------- */ /* category images */ /* ------------ */
