@@ -178,12 +178,13 @@ button:focus {
 }
 .col-lg.overlay {
   background: #000;
-  position: absolute;
+  position: fixed;
   top: -100vh;
   z-index: 3;
 }
 .menu .nav > ul {
-  position: absolute;
+  position: fixed;
+
   top: 50%;
   left: 50%;
   color: #fff;
