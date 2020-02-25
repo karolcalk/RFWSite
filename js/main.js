@@ -26,6 +26,9 @@ t1.reverse();
 $(document).on('click', '.menu-btn', function () {
   t1.reversed(!t1.reversed());
 })
+$(document).on('click', '.nav li', function () {
+  t1.reversed(!t1.reversed());
+})
 // ----nav animation script---------
 
 // ----photo-categoires animation
