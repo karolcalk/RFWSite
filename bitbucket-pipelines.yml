@@ -4,7 +4,7 @@
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
 # FIRST: "git ftp init" next "git ftp push"
-image: node:10.15.3
+image: php:7.1.29
 
 pipelines:
   branches:
@@ -13,4 +13,4 @@ pipelines:
           script:
             - apt-get update
             - apt-get -qq install git-ftp
-            - git ftp init --user $FTP_USER --passwd $FTP_PASSWD ftp://$FTP_IP
+            - git ftp init --user $FTP_USER --passwd $FTP_PASSWD ftp://148.251.156.146
