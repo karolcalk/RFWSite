@@ -66,15 +66,17 @@ $('.services').owlCarousel({
 // mouse scroll down 
 
 jQuery('.middle').click(function (e) {
+  $('.middle').addClass('middle-fade-out')
   $('html, body').animate({
-    scrollTop: window.innerHeight
+    scrollTop: window.innerHeight,
+
   }, 1000)
 });
 
 // ----photo-categoires animation /
 
 TweenMax.from(".left-col", 2, {
-  width: "0%",
+  // width: "0%",
   ease: Expo.easeInOut
 });
 
