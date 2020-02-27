@@ -1,0 +1,16 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+# FIRST: "git ftp init" next "git ftp push"
+image: php:7.1.29
+
+pipelines:
+  branches:
+    master:
+      - step:
+          script:
+            - apt-get update
+            - apt-get -qq install git-ftp
+            - git ftp push --user $FTP_USER --passwd $FTP_PASSWD ftp://148.251.156.146
