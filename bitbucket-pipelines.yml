@@ -13,4 +13,4 @@ pipelines:
           script:
             - apt-get update
             - apt-get -qq install git-ftp
-            - git ftp init --user $FTP_USER --passwd $FTP_PASSWD ftp://148.251.156.146
+            - git ftp push --user $FTP_USER --passwd $FTP_PASSWD ftp://148.251.156.146
