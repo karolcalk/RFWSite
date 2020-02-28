@@ -10,25 +10,32 @@ setTimeout(function () {
 
 //----------preloader animation----------
 // nav animation script
-const t1 = new TimelineMax({
-  paused: true
-});
-t1.to('.overlay', .6, {
-  top: 0,
-  ease: Expo.easeInOut
-});
-t1.staggerFrom('.menu ul li', .6, {
-  y: 100,
-  opacity: 0,
-  ease: Expo.easeOut
-}, .2);
-t1.reverse();
-$(document).on('click', '.menu-btn', function () {
-  t1.reversed(!t1.reversed());
-})
-$(document).on('click', '.nav li', function () {
-  t1.reversed(!t1.reversed());
-})
+window.onload = function () {
+
+  const t1 = new TimelineMax({
+    paused: true
+  });
+  t1.to('.overlay', .6, {
+
+    top: 0,
+    ease: Expo.easeInOut
+  });
+  t1.staggerFrom('.menu ul li', .6, {
+    y: 100,
+    opacity: 0,
+    ease: Expo.easeOut
+  }, .2);
+  t1.reverse();
+  $(document).on('click', '.menu-btn', function () {
+    t1.reversed(!t1.reversed());
+  })
+  $(document).on('click', '.nav li', function () {
+    t1.reversed(!t1.reversed());
+  })
+  document.querySelector('.col-lg.overlay ').style.display = 'block';
+}
+
+
 // ----nav animation script---------
 
 // ----photo-categoires animation
