@@ -195,3 +195,17 @@ TweenMax.from(".more", 2, {
   opacity: 0,
   ease: Expo.easeInOut
 });
+//@media for add snim class
+// const ml = window.matchMedia('(max-width:1000px)');
+// if (ml.matches) {
+//   document.querySelector('.right-col').classList.add('anim');
+//   document.querySelector('.right-col .bottom').classList.add('anim');
+// }
+
+
+// anime sections  on scrolling website
+ScrollReveal({ reset: true });
+window.sr = ScrollReveal();
+sr.reveal('.anim', { delay: 150 });
+
+
