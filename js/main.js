@@ -209,3 +209,4 @@ window.sr = ScrollReveal();
 sr.reveal('.anim', { delay: 150 });
 
 
+// smooth scrolling
