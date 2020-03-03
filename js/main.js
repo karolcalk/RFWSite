@@ -204,7 +204,7 @@ TweenMax.from(".more", 2, {
 
 
 // anime sections  on scrolling website
-ScrollReveal({ reset: true });
+// ScrollReveal({ reset: true });
 window.sr = ScrollReveal();
 sr.reveal('.anim', { delay: 150 });
 

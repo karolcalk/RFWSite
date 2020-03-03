@@ -1,9 +1,121 @@
 html,
 body {
+  background: #262626;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
   margin: 0;
   padding: 0;
 }
 
 :root {
   background-color: #333;
+}
+
+* {
+  box-sizing: border-box;
+  --headers-font-color: #aaa;
+  --font-color: #eee;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --body-color: #999;
+  --nav-color: #333;
+  --bg-color: #262626;
+  --main-color: #ddd;
+  --swipper-color: #262626;
+  --swipper-slide: rgba(43, 43, 148, 0.876);
+  --swipper-slide-color: #f44336;
+}
+
+header {
+  padding: 10px;
+  width: 100%;
+  color: var(--headers-font-color);
+  font-size: 2em;
+}
+/* nav style */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  background-color: var(--nav-color);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+/* swipper slider */
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  width: 400px;
+  min-height: 450px;
+  background-color: var(--swipper-slide);
+}
+.swiper-slide .description {
+  background-color: #fff;
+  font-size: 1.5em;
+  padding: 10px;
+  text-align: center;
+  color: var(--swipper-slide-color);
+}
+.description h2 {
+  color: #000;
+}
+
+.swiper-slide .imgBox {
+  background: url(../img/gallery-img/cake.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.swiper-slide:nth-of-type(2) .imgBox {
+  background: url(../img/gallery-img/coca-cola.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.swiper-slide:nth-of-type(3) .imgBox {
+  background: url(../img/gallery-img/girl3.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.swiper-slide:nth-of-type(4) .imgBox {
+  background: url(../img/gallery-img/girl3.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.swiper-slide:nth-of-type(3) .imgBox {
+  background: url(../img/gallery-img/girl5.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.swiper-slide .details {
+  font-size: 1em;
+}
+.swiper-slide .more {
+  padding: 10px;
+}
+.swiper-slide .more a {
+  /* text-decoration: none; */
+  font-size: 0.7em;
 }
