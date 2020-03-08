@@ -53,7 +53,7 @@ $('.services').owlCarousel({
   margin: 20,
   loop: true,
   autoplay: true,
-  autoplayTimeout: 2000,
+  autoplayTimeout: 3000,
   autoplayHoverPause: true,
   responsive: {
     0: {

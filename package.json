@@ -9,6 +9,8 @@
   "author": "karol calka",
   "license": "ISC",
   "dependencies": {
-    "ionicons": "^5.0.0"
+    "ionicons": "^5.0.0",
+    "lightbox2": "^2.11.1",
+    "photoswipe": "^4.1.3"
   }
 }
