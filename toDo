@@ -2,7 +2,7 @@ toDos
 // index.html
 -add content
 -add href attr
-
+-change index location to ./
 
 //session.html
 -add scroll up btn na session index
