@@ -210,3 +210,22 @@ sr.reveal('.anim', { delay: 150 });
 
 
 // smooth scrolling
+
+
+// instafeed.js
+$(document).ready(function () {
+  var userFeed = new Instafeed({
+    get: 'user',
+    userId: '8784148313',
+    limit: 12,
+    resolution: 'standard_resolution',
+    accessToken: 'AQCoIiRN1G8CARf_JWXo4ce3ji909yJxdGZy_Y5llQDljxc-Zl9ZYQq7dLZ390qaiDIcGmC5MlSDAM8bT_eaanNOh4yQnnvosb8QhwL9EPGKkYIGtSfPFHm_JuRxWEDDTlXcPCF3xGdew-XCKdV1-N2Gd8LtHpDUBFUhzuWfbt_Bpmi9FoFYxj25TJjNuX8hblteslYEVYRx-TtH7nKjNYy9ekAQ7Hy_vESxSyLAZlLqAQ#_',
+    sortBy: 'most-recent',
+    template: '<div class="gallery"><a href="{{image}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"/></a></div>',
+  })
+  userFeed.run();
+
+})
+
+
+//kopiowanie do schowa maila
